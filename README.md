@@ -11,7 +11,7 @@
 
 
 
-Copyright, License, and Press
+Copyright, License, and Press  
 This repository contains both the source code for the website and the original written content for the newsletter archive. They are licensed separately:
 
 1. Newsletter Content (Text & Images)
