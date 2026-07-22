@@ -1,0 +1,9 @@
+body { background: #fff; color: #1a1a1a; font-family: -apple-system, Segoe UI, sans-serif; max-width: 720px; margin: 0 auto; padding: 0 24px 60px; line-height: 1.6; }
+nav { display: flex; gap: 24px; padding: 24px 0; border-bottom: 1px solid #eee; margin-bottom: 32px; }
+nav a { color: #1a1a1a; text-decoration: none; font-weight: 500; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 28px; font-weight: 600; margin-bottom: 4px; }
+ul { list-style: none; padding: 0; }
+ul li { padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+ul li a { color: #1a1a1a; text-decoration: none; font-weight: 500; }
+ul li a:hover { text-decoration: underline; }
