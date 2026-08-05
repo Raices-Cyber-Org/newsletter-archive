@@ -3,8 +3,8 @@ layout: default
 ---
 <article>
     <nav class="post-nav">
-        {% if page.next %}<a href="{{ page.next.url | relative_url }}">Older: {{ page.next.title }} →</a>{% endif %}
-        {% if page.previous %}<a href="{{ page.previous.url | relative_url }}">← Newer: {{ page.previous.title }}</a>{% endif %}
+        {% if page.next %}<a href="{{ page.next.url | relative_url }}">← Older: {{ page.next.title }}</a>{% endif %}
+        {% if page.previous %}<a href="{{ page.previous.url | relative_url }}">Newer: {{ page.previous.title }} →</a>{% endif %}
     </nav>
   
   <h1>{{ page.title }}</h1>
