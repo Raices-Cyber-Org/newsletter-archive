@@ -1,10 +1,27 @@
 ---
 layout: default
 ---
+{% assign newer = nil %}
+{% assign older = nil %}
+{% if page.previous %}
+  {% if page.previous.date > page.date %}
+    {% assign newer = page.previous %}
+  {% else %}
+    {% assign older = page.previous %}
+  {% endif %}
+{% endif %}
+{% if page.next %}
+  {% if page.next.date > page.date %}
+    {% assign newer = page.next %}
+  {% else %}
+    {% assign older = page.next %}
+  {% endif %}
+{% endif %}
+
 <article>
   <nav class="post-nav">
-    <span class="post-nav-slot">{% if page.previous %}<a href="{{ page.previous.url | relative_url }}">← Newer: {{ page.previous.title }}</a>{% endif %}</span>
-    <span class="post-nav-slot">{% if page.next %}<a href="{{ page.next.url | relative_url }}">Older: {{ page.next.title }} →</a>{% endif %}</span>
+    <span class="post-nav-slot">{% if newer %}<a href="{{ newer.url | relative_url }}">← Newer: {{ newer.title }}</a>{% endif %}</span>
+    <span class="post-nav-slot">{% if older %}<a href="{{ older.url | relative_url }}">Older: {{ older.title }} →</a>{% endif %}</span>
   </nav>
 
   <h1>{{ page.title }}</h1>
@@ -13,7 +30,7 @@ layout: default
   {{ content }}
 
   <nav class="post-nav">
-    <span class="post-nav-slot">{% if page.previous %}<a href="{{ page.previous.url | relative_url }}">← Newer: {{ page.previous.title }}</a>{% endif %}</span>
-    <span class="post-nav-slot">{% if page.next %}<a href="{{ page.next.url | relative_url }}">Older: {{ page.next.title }} →</a>{% endif %}</span>
+    <span class="post-nav-slot">{% if newer %}<a href="{{ newer.url | relative_url }}">← Newer: {{ newer.title }}</a>{% endif %}</span>
+    <span class="post-nav-slot">{% if older %}<a href="{{ older.url | relative_url }}">Older: {{ older.title }} →</a>{% endif %}</span>
   </nav>
 </article>
