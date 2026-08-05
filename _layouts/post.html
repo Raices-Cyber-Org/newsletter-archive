@@ -3,18 +3,34 @@ layout: default
 ---
 {% assign newer = nil %}
 {% assign older = nil %}
+
 {% if page.previous %}
-  {% if page.previous.date > page.date %}
-    {% assign newer = page.previous %}
+  {% assign cand = page.previous %}
+  {% assign cand_is_newer = false %}
+  {% if cand.date > page.date %}
+    {% assign cand_is_newer = true %}
+  {% elsif cand.date == page.date and cand.path > page.path %}
+    {% assign cand_is_newer = true %}
+  {% endif %}
+  {% if cand_is_newer %}
+    {% assign newer = cand %}
   {% else %}
-    {% assign older = page.previous %}
+    {% assign older = cand %}
   {% endif %}
 {% endif %}
+
 {% if page.next %}
-  {% if page.next.date > page.date %}
-    {% assign newer = page.next %}
+  {% assign cand = page.next %}
+  {% assign cand_is_newer = false %}
+  {% if cand.date > page.date %}
+    {% assign cand_is_newer = true %}
+  {% elsif cand.date == page.date and cand.path > page.path %}
+    {% assign cand_is_newer = true %}
+  {% endif %}
+  {% if cand_is_newer %}
+    {% assign newer = cand %}
   {% else %}
-    {% assign older = page.next %}
+    {% assign older = cand %}
   {% endif %}
 {% endif %}
 
