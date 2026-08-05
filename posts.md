@@ -1,6 +1,6 @@
 ---
 layout: default
-title: All newsletters
+title: Archive Index
 permalink: /posts/
 ---
 # Newsletters
