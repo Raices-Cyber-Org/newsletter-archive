@@ -1,3 +1,4 @@
 title: RCO Newsletter Archive
 plugins:
   - jekyll-feed
+future: true
