@@ -7,6 +7,6 @@ title: Newsletter archive
 Every newsletter we send is saved here. 
 
 The oldest post on this site is from March 2026.  
-So far, ({{ site.posts -1 | size -1 }}) Raices Cyber newsletters have been successfully archived.
+So far, {{ site.posts -1 | size -1 }} Raices Cyber newsletters have been successfully archived.
   
 Browse the [full list](/posts/).
